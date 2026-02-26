@@ -1,0 +1,58 @@
+/*
+Firebase Skeleton for Smart Crop Demand Planner (Hackathon use)
+==============================================================
+
+To migrate from the Mock API to real Firebase:
+
+1. Add packages: firebase_core, cloud_firestore
+2. Initialize in main.dart: await Firebase.initializeApp();
+
+Collections Structure:
+----------------------
+- /crops/{cropId}
+  {
+    "name": "Tomato",
+    "demandScore": 85,
+    "avgPrice": 45.0,
+    "trend": [40.0, 42.0, 41.5, ...],
+    "lastUpdated": Timestamp
+  }
+
+- /buyers/{buyerId}
+  {
+    "name": "Ravi Traders",
+    "cropsInterested": ["crop1", "crop2"],
+    "location": GeoPoint(...),
+    "contact": "+91 9876543210"
+  }
+
+- /farmers/{farmerId}
+  {
+    "name": "Sugun",
+    "location": "Chennai",
+    "deviceId": "xyz",
+    "savedCrops": ["crop1", "crop3"]
+  }
+
+Firestore Security Rules (Hackathon Read-Only Data Example):
+-----------------------------------------------------------
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Anyone can read market demand and buyers (Hackathon mode)
+    // Only authenticated users/backend can write
+    match /crops/{document=**} {
+      allow read: if true;
+      allow write: if false; 
+    }
+    match /buyers/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+    // Farmer profiles: user can read/write their own
+    match /farmers/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}
+*/

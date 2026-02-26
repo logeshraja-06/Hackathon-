@@ -1,0 +1,4 @@
+Recommendation Scoring Algorithm
+================================
+Final Score = (Demand Score * 0.5) + (Normalized Avg Price * 0.1) + (Trend Slope * 2)
+The algorithm combines raw mock demand (0-100) heavily weighted (50%), a small component from raw price (10%), and highly rewards positive momentum in the trend array (slope between first and last 7-day values). Reason chips are assigned if Demand > 80 ("High Demand") or trend slope > 0 ("Rising Price").

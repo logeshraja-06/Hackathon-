@@ -1,0 +1,17 @@
+Acceptance Checklist:
+[x] Flutter stable + null-safety used, minimal dependencies (provider, shared_preferences, http).
+[x] BottomNavigationBar with 4 screens (Dashboard, Recommendations, Buyers, Settings).
+[x] Mock API reading JSON with Timer-based value updates.
+[x] CustomPaint sparkline implemented (no third-party chart libs).
+[x] Simple heuristic logic for recommendations with reason chips.
+[x] SharedPreferences offline/caching implemented for farmer profile.
+[x] Basic english/Tamil localization.
+[x] README with keystore and github actions CI notes.
+
+Quick Manual Test Cases:
+1. Open App. See Dashboard. Enter a Location, save state.
+2. Tap "Get Recommendations", ensure list loads ranked 3-5 items with chips.
+3. Tap "See Buyers", verify list of buyers filtered to that specific crop is displayed.
+4. Tap phone icon, check for "copied to clipboard" snackbar.
+5. Go to Settings, switch language to "ta", press Save, verify bottom tabs and textual titles change to Tamil strings.
+6. Wait 15 seconds on Dashboard, check if sparkline trends and prices slightly change via Timer perturb function.

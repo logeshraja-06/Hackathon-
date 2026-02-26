@@ -1,0 +1,43 @@
+[
+    {
+        "id": "b1",
+        "name": "Kumaran Traders",
+        "cropsInterested": [
+            "c1",
+            "c2"
+        ],
+        "distanceKm": 12.5,
+        "contact": "+91 9876543210"
+    },
+    {
+        "id": "b2",
+        "name": "Selvam Organics",
+        "cropsInterested": [
+            "c1",
+            "c5"
+        ],
+        "distanceKm": 4.2,
+        "contact": "+91 8765432109"
+    },
+    {
+        "id": "b3",
+        "name": "Kovai Agro Mills",
+        "cropsInterested": [
+            "c3",
+            "c4"
+        ],
+        "distanceKm": 25.0,
+        "contact": "+91 7654321098"
+    },
+    {
+        "id": "b4",
+        "name": "City Fresh Mart",
+        "cropsInterested": [
+            "c1",
+            "c2",
+            "c5"
+        ],
+        "distanceKm": 8.0,
+        "contact": "+91 6543210987"
+    }
+]

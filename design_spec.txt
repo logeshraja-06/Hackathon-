@@ -1,0 +1,65 @@
+Design Specifications & Wireframes
+==================================
+
+Color Palette:
+- Primary: #2E7D32 (Dark Green)
+- Accent: #E65100 (Deep Orange)
+- Background: #FFF8E1 (Light Cream/Yellow)
+
+Typography:
+- Title: 22px, Bold, #1B5E20
+- Subtitle: 18px, Semi-Bold, #333333
+- Body: 16px, Regular, #666666
+- Buttons: >=48x48 dp tap target size, 18px bold text.
+- Spacing: 16px standard margins/padding across screens.
+
+Wireframes
+----------
+
+[Dashboard Screen]
+App Bar: "Dashboard - Farmer Name" | [Refresh Icon]
+Body:
+  [Icon] Location Input: "Chennai" [Detect Location Icon]
+  
+  "High Demand Crops"
+  (Horizontal Scroll)
+  +--------------------------------+  +-------------------------+
+  | Tomato           [Up Arrow]    |  | Onion      [Down Arrow] |
+  | ₹45.0 / kg                     |  | ₹60.0 / kg              |
+  | [High demand now] (if >75)     |  |                         |
+  | ~~~~~ sparkline ~~~~~          |  | ~~~ sparkline ~~~       |
+  +--------------------------------+  +-------------------------+
+  
+  [ GET RECOMMENDATIONS (Bottom Button, #E65100) ]
+
+--------------------------------------------------
+
+[Recommendations Screen]
+App Bar: "Recommendations"
+Body:
+  Item 1:
+  "Onion"
+  Score: 82.5
+  Chips: [High Demand] [Rising Price]
+  [ SEE BUYERS ] -> Action Button
+  
+--------------------------------------------------
+
+[Buyers Screen]
+App Bar: "Buyers - Onion"
+Body:
+  (Avatar) Kumaran Traders
+           12.5 km away
+           [ Phone Icon ] -> Copies to clipboard/Snack bar
+           
+--------------------------------------------------
+
+[Settings Screen]
+App Bar: "Settings"
+Body:
+  Farmer Name: [_________]
+  Location:    [_________]
+  Language:    [ English | தமிழ் ]
+  
+  [ SAVE PROFILE ] (#2E7D32)
+  [ EXPORT DATA (Outlined) ]

@@ -1,0 +1,15 @@
+Manual Test Cases:
+1. Routing & State: 
+   - Enter name/location in Settings, save, verify they appear in Dashboard Appbar and Location Input.
+2. Recommendation Score: 
+   - Navigate to Recommendations. Ensure sorting is highest score -> lowest score.
+   - Verify chips show 'High Demand' and 'Rising Price' accurately based on crop JSON data.
+3. Buyer Filter:
+   - On Recommendations, tap 'See Buyers' for 'Tomato'.
+   - Ensure the Buyers list contains only buyers interested in 'c1' (Tomato ID from JSON).
+4. Timer update:
+   - Stay on Dashboard for 20 seconds. 
+   - Verify prices or sparkline slightly fluctuate due to the Timer periodic function perturbing data.
+5. Localization:
+   - Change drop-down to 'தமிழ்' in Settings.
+   - Observe BottomNavigationBar items instantly translate to Tamil.

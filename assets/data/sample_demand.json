@@ -1,0 +1,37 @@
+[
+  {
+    "id": "c1",
+    "name": "Tomato",
+    "demandScore": 88,
+    "avgPrice": 45.0,
+    "trend": [30.0, 32.0, 35.0, 38.0, 42.0, 44.0, 45.0]
+  },
+  {
+    "id": "c2",
+    "name": "Onion",
+    "demandScore": 95,
+    "avgPrice": 60.0,
+    "trend": [70.0, 68.0, 65.0, 62.0, 60.0, 58.0, 60.0]
+  },
+  {
+    "id": "c3",
+    "name": "Paddy",
+    "demandScore": 60,
+    "avgPrice": 22.0,
+    "trend": [21.0, 21.0, 21.5, 22.0, 22.0, 22.0, 22.0]
+  },
+  {
+    "id": "c4",
+    "name": "Sugarcane",
+    "demandScore": 76,
+    "avgPrice": 300.0,
+    "trend": [290.0, 292.0, 295.0, 298.0, 300.0, 301.0, 300.0]
+  },
+  {
+    "id": "c5",
+    "name": "Banana",
+    "demandScore": 82,
+    "avgPrice": 25.0,
+    "trend": [20.0, 21.0, 22.0, 24.0, 25.0, 26.0, 25.0]
+  }
+]

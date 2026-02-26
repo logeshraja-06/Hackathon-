@@ -1,0 +1,6 @@
+Caching & Offline Fallback Strategy
+====================================
+- Framework Used: `shared_preferences`.
+- Profile Caching: In `farmer_state.dart`, the user's customized name, location, and language preference are persisted locally.
+- Offline behavior: If closing and reopening the app without network, these details load instantaneously in `_loadProfile()`.
+- Scale up: For JSON data arrays (mock demand/buyers), SharedPreferences or a SQLite local database (like Isar/sqflite) could be implemented to store the last-fetched API string, serving it immediately before making fresh REST calls, avoiding loading spinners during startup.
