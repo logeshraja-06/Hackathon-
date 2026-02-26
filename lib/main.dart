@@ -6,6 +6,7 @@ import 'screens/dashboard.dart';
 import 'screens/recommendations.dart';
 import 'screens/buyers.dart';
 import 'screens/settings.dart';
+import 'screens/soil_health.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -75,6 +76,7 @@ class _MainNavigatorState extends State<MainNavigator> {
       DashboardScreen(onNavigateToRecommendations: _navigateToRecommendations),
       RecommendationsScreen(onSeeBuyers: _navigateToBuyersWithCrop),
       BuyersScreen(initialCropFilter: _selectedCropForBuyers),
+      const SoilHealthScreen(),
       const SettingsScreen(),
     ];
 
@@ -90,6 +92,7 @@ class _MainNavigatorState extends State<MainNavigator> {
           BottomNavigationBarItem(icon: const Icon(Icons.dashboard), label: state.get('dashboard')),
           BottomNavigationBarItem(icon: const Icon(Icons.thumb_up), label: state.get('recommendations')),
           BottomNavigationBarItem(icon: const Icon(Icons.people), label: state.get('buyers')),
+          BottomNavigationBarItem(icon: const Icon(Icons.science), label: state.get('soil_health')),
           BottomNavigationBarItem(icon: const Icon(Icons.settings), label: state.get('settings')),
         ],
       ),

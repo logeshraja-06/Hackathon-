@@ -22,6 +22,14 @@ class FarmerState extends ChangeNotifier {
       'language': 'Language',
       'export_data': 'Export Data',
       'save': 'Save Profile',
+      'soil_health': 'Soil Health',
+      'upload_card': 'Upload Soil Card',
+      'upload_desc': 'Scan your TN Government Soil Health Card to get AI-driven precision fertilizer recommendations.',
+      'extracted_params': 'Extracted Soil Parameters',
+      'shopping_list': 'Fertilizer Shopping List',
+      'urea': 'Urea',
+      'dap': 'DAP',
+      'mop': 'MOP',
     },
     'ta': {
       'dashboard': 'முகப்பு',
@@ -38,6 +46,14 @@ class FarmerState extends ChangeNotifier {
       'language': 'மொழி',
       'export_data': 'தரவு ஏற்றுமதி',
       'save': 'சேமி',
+      'soil_health': 'மண் வளம்',
+      'upload_card': 'அட்டை பதிவேற்றுக',
+      'upload_desc': 'துல்லியமான உர பரிந்துரைகளுக்கு உங்கள் மண் வள அட்டையை ஸ்கேன் செய்யவும்.',
+      'extracted_params': 'பிரித்தெடுக்கப்பட்ட மண் அளவீடுகள்',
+      'shopping_list': 'உர கொள்முதல் பட்டியல்',
+      'urea': 'யூரியா',
+      'dap': 'டி.ஏ.பி (DAP)',
+      'mop': 'எம்.ஓ.பி (MOP)',
     }
   };
 
