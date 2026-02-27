@@ -4,6 +4,8 @@ import '../state/farmer_state.dart';
 import '../models/soil_report.dart';
 import '../services/soil_ai_service.dart';
 import '../widgets/visual_gauge.dart';
+import 'package:file_picker/file_picker.dart';
+import 'dart:io';
 
 class SoilHealthScreen extends StatefulWidget {
   const SoilHealthScreen({Key? key}) : super(key: key);
@@ -17,6 +19,7 @@ class _SoilHealthScreenState extends State<SoilHealthScreen> {
   SoilReport? _report;
   Map<String, dynamic>? _recommendation;
   String? _damAlert;
+  File? _selectedFile;
 
   @override
   void initState() {
@@ -33,19 +36,39 @@ class _SoilHealthScreenState extends State<SoilHealthScreen> {
   }
 
   Future<void> _handleUploadCard() async {
-    setState(() => _isProcessingOCR = true);
-    
-    // Simulate OCR Extraction
-    final extractedReport = await SoilAiService().simulateOCR();
-    // Simulate AI Recommendation for default crop 'Samba Rice'
-    final recs = SoilAiService().calculateFertilizer(extractedReport, 'Samba Rice');
+    try {
+      FilePickerResult? result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['pdf', 'doc', 'docx', 'png', 'jpg', 'jpeg'],
+      );
 
-    if (mounted) {
-      setState(() {
-        _report = extractedReport;
-        _recommendation = recs;
-        _isProcessingOCR = false;
-      });
+      if (result != null && result.files.single.path != null) {
+        final String filePath = result.files.single.path!;
+        
+        setState(() {
+          _selectedFile = File(filePath);
+          _isProcessingOCR = true;
+        });
+
+        // Simulate OCR Extraction using the real file path
+        final extractedReport = await SoilAiService().simulateOCR(imagePath: filePath);
+        
+        // Simulate AI Recommendation for default crop 'Samba Rice'
+        final recs = SoilAiService().calculateFertilizer(extractedReport, 'Samba Rice');
+
+        if (mounted) {
+          setState(() {
+            _report = extractedReport;
+            _recommendation = recs;
+            _isProcessingOCR = false;
+          });
+        }
+      }
+    } catch (e) {
+      if (mounted) {
+        setState(() => _isProcessingOCR = false);
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Failed to pick file: $e')));
+      }
     }
   }
 
@@ -160,11 +183,29 @@ class _SoilHealthScreenState extends State<SoilHealthScreen> {
                   ),
                 ),
               ),
+              if (_report!.recommendedCrops != null && _report!.recommendedCrops!.isNotEmpty) ...[
+                const SizedBox(height: 24),
+                Text(state.get('recommended_crops'), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xFFE65100))),
+                const SizedBox(height: 8),
+                Wrap(
+                  spacing: 8.0,
+                  runSpacing: 4.0,
+                  children: _report!.recommendedCrops!.map((crop) => Chip(
+                    label: Text(crop),
+                    avatar: const Icon(Icons.grass, color: Colors.green, size: 18),
+                    backgroundColor: Colors.orange.shade50,
+                    side: BorderSide(color: Colors.orange.shade200),
+                  )).toList(),
+                ),
+              ],
               const SizedBox(height: 16),
               OutlinedButton.icon(
                 icon: const Icon(Icons.refresh),
                 label: const Text('Scan Another Card'),
-                onPressed: () => setState(() => _report = null),
+                onPressed: () => setState(() {
+                  _report = null;
+                  _selectedFile = null;
+                }),
               )
             ]
           ],

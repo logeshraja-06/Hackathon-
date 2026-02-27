@@ -1,0 +1,90 @@
+[
+  {
+    "priceDate": "2026-05-15",
+    "districtName": "Salem",
+    "marketName": "Salem Market",
+    "commodityGroup": "Fruits",
+    "commodity": "Mango",
+    "variety": "Alphonso",
+    "season": "Zaid (Summer)",
+    "arrivalVolumeTonnes": 300.0,
+    "modalPriceRsQuintal": 4500
+  },
+  {
+    "priceDate": "2026-07-20",
+    "districtName": "Thanjavur",
+    "marketName": "Thanjavur Market",
+    "commodityGroup": "Cereals",
+    "commodity": "Paddy",
+    "variety": "Kuruvai",
+    "season": "Kharif (Monsoon)",
+    "arrivalVolumeTonnes": 850.5,
+    "modalPriceRsQuintal": 2183
+  },
+  {
+    "priceDate": "2026-01-14",
+    "districtName": "Madurai",
+    "marketName": "Madurai Market",
+    "commodityGroup": "Commercial",
+    "commodity": "Sugarcane",
+    "variety": "Pongal Special",
+    "season": "Rabi (Winter)",
+    "arrivalVolumeTonnes": 500.0,
+    "modalPriceRsQuintal": 3200
+  },
+  {
+    "priceDate": "2026-08-10",
+    "districtName": "Dindigul",
+    "marketName": "Oddanchatram",
+    "commodityGroup": "Vegetables",
+    "commodity": "Onion",
+    "variety": "Small/Bellary",
+    "season": "Kharif (Monsoon)",
+    "arrivalVolumeTonnes": 120.0,
+    "modalPriceRsQuintal": 2800
+  },
+  {
+    "priceDate": "2026-03-05",
+    "districtName": "Erode",
+    "marketName": "Erode Market",
+    "commodityGroup": "Spices",
+    "commodity": "Turmeric",
+    "variety": "Bulb",
+    "season": "Rabi (Winter)",
+    "arrivalVolumeTonnes": 75.5,
+    "modalPriceRsQuintal": 7500
+  },
+  {
+    "priceDate": "2026-02-26",
+    "districtName": "Coimbatore",
+    "marketName": "Mettupalayam",
+    "commodityGroup": "Vegetables",
+    "commodity": "Potato",
+    "variety": "Kufri",
+    "season": "All-Year",
+    "arrivalVolumeTonnes": 95.0,
+    "modalPriceRsQuintal": 2200
+  },
+  {
+    "priceDate": "2026-06-10",
+    "districtName": "Trichy",
+    "marketName": "Gandhi Market",
+    "commodityGroup": "Fruits",
+    "commodity": "Banana",
+    "variety": "Poovan",
+    "season": "All-Year",
+    "arrivalVolumeTonnes": 60.2,
+    "modalPriceRsQuintal": 1750
+  },
+  {
+    "priceDate": "2026-04-20",
+    "districtName": "Nilgiris",
+    "marketName": "Ooty Market",
+    "commodityGroup": "Vegetables",
+    "commodity": "Carrot",
+    "variety": "Ooty",
+    "season": "Zaid (Summer)",
+    "arrivalVolumeTonnes": 45.0,
+    "modalPriceRsQuintal": 4800
+  }
+]

@@ -8,6 +8,8 @@ class SoilReport {
   final double potassium;
   final DateTime dateTested;
 
+  final List<String>? recommendedCrops;
+
   SoilReport({
     required this.id,
     required this.phLevel,
@@ -17,6 +19,7 @@ class SoilReport {
     required this.phosphorus,
     required this.potassium,
     required this.dateTested,
+    this.recommendedCrops,
   });
 
   factory SoilReport.demo() {
@@ -29,6 +32,7 @@ class SoilReport {
       phosphorus: 15.0, // Medium (kg/ha)
       potassium: 250.0, // High (kg/ha)
       dateTested: DateTime.now().subtract(const Duration(days: 5)),
+      recommendedCrops: ['Samba Rice (சம்பா நெல்)', 'Banana (வாழை)'],
     );
   }
 }
